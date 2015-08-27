@@ -8,6 +8,7 @@ html {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  transition: background 1s linear;
 }
 
 ul li {
@@ -15,7 +16,7 @@ ul li {
   text-align: center;
 }
 
-form {
+form, .info_reset_password {
   width: 25%;
   min-width: 400px;
   height: 200px;
@@ -28,11 +29,11 @@ form {
   margin-top: -100px;
 }
 
-form ul, form li {
+form ul, form li, .info_reset_password ul, .info_reset_password li {
   width: 100%;
 }
 
-form input {
+form input, .info_reset_password input {
   font-family: 'Open Sans', sans-serif;
   font-size: x-large;
   width: 80%;
@@ -45,12 +46,12 @@ form input {
   margin-left: 10%;
 }
 
-form input.text {
+form input.text, .info_reset_password input.text {
   text-indent: 0.2cm;
   margin-bottom: 10px;
 }
 
-form a {
+form a, .info_reset_password a {
   width: auto;
   text-align: right;
   margin-right: 10%;
@@ -61,4 +62,13 @@ form a {
 
 .margin_bottom_10 {
   margin-bottom: 10px;
+}
+
+.info_reset_password {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  height: 100px;
+  margin-top: -50px;
+  line-height: 25px;
 }
