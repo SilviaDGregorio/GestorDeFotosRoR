@@ -1,0 +1,17 @@
+<%= form_for @user, url: session_check_url do |f| %>
+	<ul class="margin_bottom_10">
+		<%if flash[:error]%>
+		<li><%=flash[:error]%></li>
+		<%end%>
+	</ul>
+	<ul>
+		<li class="email margin-bottom-15">	
+			<%= f.text_field :email, class: "text",placeholder: "email" %>
+		</li>
+		<li class="password">
+			<%= f.password_field :password, class: "text",placeholder: "password"%>
+		</li>
+	</ul>
+	<%= f.submit "Entrar" %>
+	<a href="#">¿Has olvidado tu contraseña?</a>
+<% end %>

@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+if User.all.empty?
+	User.create(:name=>"Silvia",:blocked=>"0",:email => "silviadegm@gmail.com", :email_confirmation => "silviadegm@gmail.com", :password => "silvia", :password_confirmation => "silvia")
+end

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  ###############admin#################
+  root :to => "admin/session#login"
+  post "login_check" => "admin/session#check_login", as: "session_check"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

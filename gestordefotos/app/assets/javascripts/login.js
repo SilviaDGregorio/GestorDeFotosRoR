@@ -1,7 +1,7 @@
-
+//= require jquery-2.1.4
 $(function() {
   var body = $('html');
-  var backgrounds = ['url(../assets/images/sky.jpg)', 'url(../assets/images/sky1.jpg)','url(../assets/images/sky2.jpg)','url(../assets/images/sky3.jpg)'];
+  var backgrounds = ['url(assets/sky.jpg)', 'url(assets/sky1.jpg)','url(assets/sky2.jpg)','url(assets/sky3.jpg)'];
   var current = 0;
 
 function nextBackground() {
