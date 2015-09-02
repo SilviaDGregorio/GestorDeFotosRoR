@@ -5,18 +5,29 @@
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="robots" content="noindex">
-	<title>Página de login</title>
-	<meta name = "viewport" content = "width = 630">
-	<link rel="shortcut icon" href="../assets/images/admin/admin_favicon.ico" type="image/ico">	
-	<%= stylesheet_link_tag "login", media: "all" %>
-	<%= javascript_include_tag "login" %>
+	<title>Página de usuarios</title>
+	<meta name = "viewport" content = "width = 630">	
+	<link rel="shortcut icon" href="../assets/images/admin/admin_favicon.ico" type="image/ico">
+	<%= stylesheet_link_tag "admin", media: "all" %>
+<!--	<%= javascript_include_tag "admin" %>-->
 	
 </head>
 
 <body>
-	
+<div class="menu">
+	<div  class="menu_active"><a href="#"><img src="assets/menu.png"></a></div>
+	<div class="menu_two">
+		<div class="circle">
+			<a href="#"><img src="assets/folders.png"></a>
+			<a href="#" class="active"><img src="assets/users.png"></a>
+			<a href="#"><img src="assets/logout.png"></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
 <div class="wrapper">
-	<%=yield%>		
+<%=yield%>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 #encoding: utf-8
 class Admin::SessionController < ApplicationController
-	layout "admin"
+	layout "session"
 	def login
 		@user=User.new
 	end
@@ -9,7 +9,7 @@ class Admin::SessionController < ApplicationController
 
 		if !@user_find.nil?
 			if params[:user][:password]== @user_find.password
-					redirect_to silvia_url
+					redirect_to users_url
 			else
 
 				redirect_to root_url, :flash => { :error => "email o contraseña desconocidos"}

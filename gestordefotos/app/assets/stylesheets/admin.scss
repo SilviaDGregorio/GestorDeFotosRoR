@@ -1,0 +1,106 @@
+@import 'variable';
+@import 'mixin';
+@import 'reset';
+html, body
+{
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+	font-size:24px;
+}
+html{
+	background-color: #DBEECC;
+}
+ul{
+	li{
+		margin-top: 20px;
+		color:$textcolor;
+		a{
+			color:$textcolor;
+			text-decoration: none;
+			&:first-of-type{
+				margin-right: 20px;
+			}
+			&.img{
+				margin-top: 20px;
+			}
+			img{
+				width: 26px;
+				margin-left: 5px;
+			}
+
+		}
+	}
+}
+.clear{
+	clear: both;
+}
+.menu{
+	height:100%;
+	width:150px;
+}
+.menu:hover .menu_two{
+	left:0px;
+}
+.menu_two{
+	transition: left 0.3s linear;
+	position:absolute;
+	left:-150px;
+	background-color: #C1E1A6;
+	width: 150px;
+	height: 100%;
+}
+.circle{
+
+	position:absolute;
+	top:0px;
+	margin-top:225px;
+	left:25px;
+	a{
+		display: block;
+		@include menu_options;
+		&.active{		
+			background-color:#FF9009;		
+		}
+	}
+
+}
+.menu_active{
+	z-index:1;
+	position:absolute;
+	background-color: #C1E1A6;
+	width:100%;
+	height:150px;
+	a{
+		@include menu_options;
+		margin-left:25px;
+		margin-top:25px;
+		img{
+			margin-left: 25px;
+		}
+	}
+}
+.wrapper{
+
+	width: 75%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin-left: auto;
+	margin-top:200px;
+}
+.style-1 input[type="text"] , .style-1 input[type="password"]{
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus,
+.style-1 input[type="password"]:focus,
+.style-1 input[type="password"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
