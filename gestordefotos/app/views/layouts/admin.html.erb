@@ -15,18 +15,24 @@
 
 <body>
 <div class="menu">
-	<div  class="menu_active"><a href="#"><img src="assets/menu.png"></a></div>
+	<div  class="menu_active"><a href="#"><%= image_tag("menu.png") %></a></div>
 	<div class="menu_two">
 		<div class="circle">
-			<a href="#"><img src="assets/folders.png"></a>
-			<a href="#" class="active"><img src="assets/users.png"></a>
-			<a href="#"><img src="assets/logout.png"></a>
+			<a href="#"><%= image_tag("folders.png") %></a>
+			<a href="#" class="active"><%= image_tag("users.png") %></a>
+			<a href="#"><%= image_tag("logout.png") %></a>
 		</div>
 		<div class="clear"></div>
 	</div>
 </div>
 
 <div class="wrapper">
+<% if flash[:error] -%>
+  <p class='error'><%=h flash[:error] %></p>
+<% end -%>
+<% if flash[:notice] -%>
+  <p class='notice'><%=h flash[:notice] %></p>
+<% end -%>
 <%=yield%>
 </div>
 </body>

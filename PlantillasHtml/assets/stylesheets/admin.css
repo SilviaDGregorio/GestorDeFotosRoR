@@ -12,8 +12,26 @@ html {
 }
 
 ul li {
-  color: white;
-  text-align: center;
+  margin-top: 20px;
+  color: #4d4d4d;
+}
+
+ul li a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+ul li a:first-of-type {
+  margin-right: 20px;
+}
+
+ul li a.img {
+  margin-top: 20px;
+}
+
+ul li a img {
+  width: 26px;
+  margin-left: 5px;
 }
 
 .clear {
@@ -107,4 +125,18 @@ ul li {
   right: 0px;
   margin-left: auto;
   margin-top: 200px;
+}
+
+.style-1 input[type="text"], .style-1 input[type="password"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus,
+.style-1 input[type="password"]:focus,
+.style-1 input[type="password"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
 }

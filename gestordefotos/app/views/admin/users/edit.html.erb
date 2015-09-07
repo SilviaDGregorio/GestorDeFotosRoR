@@ -1,0 +1,23 @@
+<h1>Edit user</h1>
+	<%=form_for @user do |f|%>
+		<section>
+			<ul class="input-list style-1 clearfix">
+				<li>
+					<%=f.text_field :name, class: "focus"%>
+				</li>
+				<li>
+					<%=f.text_field :email, class: "focus"%>
+				</li>
+				<li>
+					<%=f.text_field :email_confirmation, class: "focus"%>
+				</li>
+				<li>
+					<%=f.password_field :password, class: "focus"%>
+				</li>
+				<li>
+					<%=f.password_field :password_confirmation, class: "focus"%>
+				</li>
+			</ul>
+		</section>
+		<%= f.submit "Change" %>
+	<%end%>

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   ###############admin#################
   root :to => "admin/session#login"
+  
   post "login_check" => "admin/session#check_login", as: "session_check"
+
   scope module: 'admin' do
     resources :users
   end

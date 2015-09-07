@@ -13,8 +13,23 @@ html{
 }
 ul{
 	li{
-		color: white;
-		text-align: center;
+		margin-top: 20px;
+		color:$textcolor;
+		a{
+			color:$textcolor;
+			text-decoration: none;
+			&:first-of-type{
+				margin-right: 20px;
+			}
+			&.img{
+				margin-top: 20px;
+			}
+			img{
+				width: 26px;
+				margin-left: 5px;
+			}
+
+		}
 	}
 }
 .clear{
@@ -75,4 +90,16 @@ ul{
 	right: 0px;
 	margin-left: auto;
 	margin-top:200px;
+}
+.style-1 input[type="text"] , .style-1 input[type="password"]{
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.style-1 input[type="text"]:focus,
+.style-1 input[type="text"].focus,
+.style-1 input[type="password"]:focus,
+.style-1 input[type="password"].focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
 }
