@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20150909165524) do
   end
 
   create_table "photos", force: :cascade do |t|
+    t.integer  "album_id",           limit: 4
+    t.datetime "order_date"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "image_file_name",    limit: 255
@@ -27,6 +29,8 @@ ActiveRecord::Schema.define(version: 20150909165524) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
   end
+
+  add_index "photos", ["album_id"], name: "index_photos_on_album_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                  limit: 255
