@@ -18,8 +18,8 @@
 	<div  class="menu_active"><a href="#"><%= image_tag("menu.png") %></a></div>
 	<div class="menu_two">
 		<div class="circle">
-			<a href="#"><%= image_tag("folders.png") %></a>
-			<a href="#" class="active"><%= image_tag("users.png") %></a>
+			<%=link_to image_tag("folders.png"),albums_url%>
+			<%=link_to image_tag("users.png"),users_url, class: "active" %>
 			<a href="#"><%= image_tag("logout.png") %></a>
 		</div>
 		<div class="clear"></div>

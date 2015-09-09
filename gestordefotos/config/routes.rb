@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   scope module: 'admin' do
     resources :users
+    resources :albums do
+       resources :photos
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

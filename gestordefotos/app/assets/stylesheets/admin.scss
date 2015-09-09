@@ -16,7 +16,7 @@ ul{
 	li{
 		margin-top: 20px;
 		color:$textcolor;
-		a{
+		a.image_link{
 			color:$textcolor;
 			text-decoration: none;
 			&:first-of-type{
@@ -32,6 +32,21 @@ ul{
 
 		}
 	}
+}
+a.image_link{
+	color:$textcolor;
+	text-decoration: none;
+	&:first-of-type{
+		margin-right: 20px;
+	}
+	&.img{
+		margin-top: 20px;
+	}
+	img{
+		width: 26px;
+		margin-left: 5px;
+	}
+
 }
 .clear{
 	clear: both;

@@ -1,7 +1,7 @@
 <li>
 	<a href="#"><%= link_to user.name , edit_user_url(user)%></a>
 	<span><%=user.email%></span>
-	<%=link_to image_tag("edit.png"), edit_user_url(user)%>
-	<%=link_to image_tag("delete.png"),{ action: :destroy, id: user.id }, method: :delete, data: { confirm: 'Are you sure?' }%>
+	<%=link_to image_tag("edit.png"), edit_user_url(user), :class=> "image_link"%>
+	<%=link_to image_tag("delete.png"),{ action: :destroy, id: user.id }, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"image_link"%>
 </li>
 	
